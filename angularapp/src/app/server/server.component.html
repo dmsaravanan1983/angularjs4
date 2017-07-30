@@ -1,0 +1,18 @@
+<h3>Here goes the new server component</h3>
+<div class="container-fluid row">
+    <div class="col-md-3"><a href="">Ajay</a></div>
+    <div class="col-md-3"><a href="">saravanan</a></div>
+    <div class="col-md-3"><a href="">hemalatha</a></div>
+    <div class="col-md-3"><a href="">Abbr</a></div>
+</div>
+<!-- <button class="btn btn-primary" [disabled]="allowAction" (click)="excute()">Click me</button> -->
+<button class="btn btn-primary" (click)="excute()">Click me</button>
+<input type="text" [(ngModel)]="newVal" />
+<!-- <p [innerText]="newVal"></p> -->
+
+<div *ngIf="allowAction; else elsepart">---------------------- {{newVal}}</div>
+<ng-template #elsepart>
+  <p>
+    nothing to show man
+  </p>
+</ng-template>
