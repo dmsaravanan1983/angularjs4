@@ -1,0 +1,14 @@
+<div>
+  <ul class="nav nav-tabs">
+    <li role="presentation" [ngClass]="{active: chosenSide === 'all'}">
+      <a (click)="onSelect('all')" class="pointer">All</a>
+    </li>
+    <li role="presentation" [ngClass]="{active: chosenSide === 'veg'}">
+      <a (click)="onSelect('veg')" class="pointer">Veg</a>
+    </li>
+    <li role="presentation" [ngClass]="{active: chosenSide === 'nveg'}">
+      <a (click)="onSelect('nveg')" class="pointer">Non-Veg</a>
+    </li>
+  </ul>
+  <app-list [recipes]="getRecipes()"></app-list>
+</div>
